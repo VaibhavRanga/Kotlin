@@ -38,4 +38,9 @@ fun main() {
     //Shuffle
     println(cities.shuffled())
 
+    println("-----------------------------")
+
+    val sortWithChennaiFirst = cities.sortedWith(compareBy({ it != "Chennai" }, { it }))
+    println(sortWithChennaiFirst)
+
 }
