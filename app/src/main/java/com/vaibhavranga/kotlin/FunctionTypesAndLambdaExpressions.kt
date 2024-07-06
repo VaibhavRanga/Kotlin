@@ -20,7 +20,7 @@ fun main() {
 
 fun trickOrTreat(isTrick: Boolean, extraTreat: ((Int) -> String)?): () -> Unit {
     return if (isTrick) {
-        return trick
+        trick
     } else {
         if (extraTreat != null)
             println(extraTreat(5))

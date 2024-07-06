@@ -27,6 +27,10 @@ fun main() {
     when (num) {
         100 -> {}       //if num == 100 this will get executed
         150 -> {}       //if num == 150 this will get executed
+        in 1..10 -> {}   //if num is in the range of 1 to 10 this will get executed
+        is Int -> {}     //if num is of type Int this will get executed
+        !is Int -> {}    //if num is not of type Int this will get executed
+        200, 300, 400 -> {} //if num is 200 or 300 or 400 this will get executed
         else -> {}
     }
 
