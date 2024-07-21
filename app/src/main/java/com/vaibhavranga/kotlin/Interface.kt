@@ -8,8 +8,10 @@ fun main() {
     println("The sums of two numbers are " + classC.sum(5,6) + " and " + classD.sum(5,6))
     println("The sums of three numbers are " + classC.sum(5,6,7) + " and " + classD.sum(5,6,7))
 }
-//Variables and functions are abstract in Interface
-//Multiple interfaces can be inherited by a class while multiple classes can't be inherited by a class.
+//Variables and functions are abstract in Interface.
+//Interfaces need to be implemented by a class.
+//Multiple interfaces can be implemented by a class while multiple classes can't be inherited by a class.
+//The methods in an interface may or may not have definitions.
 
 interface Add {
     var number: Int

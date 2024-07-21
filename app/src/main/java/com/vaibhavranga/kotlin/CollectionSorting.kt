@@ -22,7 +22,7 @@ fun main() {
     people.sortedBy { it.age }.forEach { println(it) }
 
     println("------------------------")
-    people.sortedWith(compareBy { it.firstName }).forEach { println(it) }
+    people.sortedWith(compareBy { it.firstName }).forEach { println(it) }       //compareBy is a custom comparator
 
     println("--------------------------")
 
@@ -40,7 +40,6 @@ fun main() {
 
     println("-----------------------------")
 
-    val sortWithChennaiFirst = cities.sortedWith(compareBy({ it != "Chennai" }, { it }))
-    println(sortWithChennaiFirst)
-
+    val sortWithChennaiAndMahabaleshwarFirst = cities.sortedWith(compareBy({ it != "Chennai" }, { it != "Mahabaleshwar" }, { it }))
+    println(sortWithChennaiAndMahabaleshwarFirst)
 }

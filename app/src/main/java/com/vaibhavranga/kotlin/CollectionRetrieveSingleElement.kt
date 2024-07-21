@@ -15,7 +15,7 @@ fun main() {
     println("First element: ${cities.first()}")
     println("First element starting with 'M': ${cities.first { it.startsWith("M")}}")
     println("Last element starting with 'M': ${cities.last { it.startsWith("M")}}")
-    println("First element ending with 'a': ${cities.first { it.endsWith("a")}}")
+    println("First element ending with 'a': ${cities.firstOrNull() { it.lowercase().endsWith("a")}}")
 
     //Find
     println("Find New Delhi: ${cities.find { it == "Delhi" }}")
