@@ -60,7 +60,7 @@ class TVSpeakers {
         }
 
 
-    //these two are have same functionality
+    //these two have same functionality
     var age1 = 10
         private set
 
