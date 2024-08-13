@@ -2,8 +2,8 @@ package com.vaibhavranga.kotlin
 
 fun main() {
 
-    val treatFunction = trickOrTreat(false) {"$it quarters"}
-    val trickFunction = trickOrTreat(true, null)
+    val treatFunction = trickOrTreat(false, 10) {"$it quarters"}
+    val trickFunction = trickOrTreat(true, extraTreat =  null)
 
     treatFunction()
     trickFunction()
@@ -18,12 +18,12 @@ fun main() {
     println(difference(100, 50))
 }
 
-fun trickOrTreat(isTrick: Boolean, extraTreat: ((Int) -> String)?): () -> Unit {
+fun trickOrTreat(isTrick: Boolean, extraTreatNumber: Int = 5, extraTreat: ((Int) -> String)?): () -> Unit {
     return if (isTrick) {
         trick
     } else {
         if (extraTreat != null)
-            println(extraTreat(5))
+            println(extraTreat(extraTreatNumber))
         treat
     }
 }
